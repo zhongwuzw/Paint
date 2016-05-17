@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		0E4F39F81CE5BF7700393C10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F39F71CE5BF7700393C10 /* main.m */; };
 		0E4F39FB1CE5BF7700393C10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F39FA1CE5BF7700393C10 /* AppDelegate.m */; };
-		0E4F39FE1CE5BF7700393C10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F39FD1CE5BF7700393C10 /* ViewController.m */; };
+		0E4F39FE1CE5BF7700393C10 /* CoordinatingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F39FD1CE5BF7700393C10 /* CoordinatingController.m */; };
 		0E4F3A011CE5BF7700393C10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4F39FF1CE5BF7700393C10 /* Main.storyboard */; };
 		0E4F3A031CE5BF7700393C10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4F3A021CE5BF7700393C10 /* Assets.xcassets */; };
 		0E4F3A061CE5BF7700393C10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4F3A041CE5BF7700393C10 /* LaunchScreen.storyboard */; };
 		0E4F3A111CE5BF7700393C10 /* PaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F3A101CE5BF7700393C10 /* PaintTests.m */; };
 		0E4F3A1C1CE5BF7700393C10 /* PaintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F3A1B1CE5BF7700393C10 /* PaintUITests.m */; };
+		0ED69AB51CE9B9C8008AE0D8 /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED69AB41CE9B9C8008AE0D8 /* CanvasViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,8 @@
 		0E4F39F71CE5BF7700393C10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0E4F39F91CE5BF7700393C10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E4F39FA1CE5BF7700393C10 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0E4F39FC1CE5BF7700393C10 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0E4F39FD1CE5BF7700393C10 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0E4F39FC1CE5BF7700393C10 /* CoordinatingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoordinatingController.h; sourceTree = "<group>"; };
+		0E4F39FD1CE5BF7700393C10 /* CoordinatingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoordinatingController.m; sourceTree = "<group>"; };
 		0E4F3A001CE5BF7700393C10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E4F3A021CE5BF7700393C10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E4F3A051CE5BF7700393C10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,8 @@
 		0E4F3A171CE5BF7700393C10 /* PaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4F3A1B1CE5BF7700393C10 /* PaintUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintUITests.m; sourceTree = "<group>"; };
 		0E4F3A1D1CE5BF7700393C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ED69AB31CE9B9C8008AE0D8 /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
+		0ED69AB41CE9B9C8008AE0D8 /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +104,14 @@
 		0E4F39F51CE5BF7700393C10 /* Paint */ = {
 			isa = PBXGroup;
 			children = (
+				0ED69AB21CE9B7D4008AE0D8 /* PlatteView */,
+				0ED69AB11CE9B7C9008AE0D8 /* Thumbnail */,
+				0ED69AB01CE9B7B8008AE0D8 /* Canvas */,
+				0ED69AAF1CE9B5B6008AE0D8 /* Utilities */,
 				0E4F39F91CE5BF7700393C10 /* AppDelegate.h */,
 				0E4F39FA1CE5BF7700393C10 /* AppDelegate.m */,
-				0E4F39FC1CE5BF7700393C10 /* ViewController.h */,
-				0E4F39FD1CE5BF7700393C10 /* ViewController.m */,
+				0E4F39FC1CE5BF7700393C10 /* CoordinatingController.h */,
+				0E4F39FD1CE5BF7700393C10 /* CoordinatingController.m */,
 				0E4F39FF1CE5BF7700393C10 /* Main.storyboard */,
 				0E4F3A021CE5BF7700393C10 /* Assets.xcassets */,
 				0E4F3A041CE5BF7700393C10 /* LaunchScreen.storyboard */,
@@ -138,6 +145,36 @@
 				0E4F3A1D1CE5BF7700393C10 /* Info.plist */,
 			);
 			path = PaintUITests;
+			sourceTree = "<group>";
+		};
+		0ED69AAF1CE9B5B6008AE0D8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		0ED69AB01CE9B7B8008AE0D8 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				0ED69AB31CE9B9C8008AE0D8 /* CanvasViewController.h */,
+				0ED69AB41CE9B9C8008AE0D8 /* CanvasViewController.m */,
+			);
+			name = Canvas;
+			sourceTree = "<group>";
+		};
+		0ED69AB11CE9B7C9008AE0D8 /* Thumbnail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Thumbnail;
+			sourceTree = "<group>";
+		};
+		0ED69AB21CE9B7D4008AE0D8 /* PlatteView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PlatteView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E4F39FE1CE5BF7700393C10 /* ViewController.m in Sources */,
+				0ED69AB51CE9B9C8008AE0D8 /* CanvasViewController.m in Sources */,
+				0E4F39FE1CE5BF7700393C10 /* CoordinatingController.m in Sources */,
 				0E4F39FB1CE5BF7700393C10 /* AppDelegate.m in Sources */,
 				0E4F39F81CE5BF7700393C10 /* main.m in Sources */,
 			);
@@ -496,6 +534,7 @@
 				0E4F3A221CE5BF7700393C10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E4F3A231CE5BF7700393C10 /* Build configuration list for PBXNativeTarget "PaintTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +543,7 @@
 				0E4F3A251CE5BF7700393C10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E4F3A261CE5BF7700393C10 /* Build configuration list for PBXNativeTarget "PaintUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +552,7 @@
 				0E4F3A281CE5BF7700393C10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

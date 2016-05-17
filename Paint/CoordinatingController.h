@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CoordinatingController : UIViewController
 
+@property (nonatomic, readonly) UIViewController *activeViewController;
+
++ (instancetype)sharedInstance;
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CoordinatingController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    CoordinatingController *coordinatingController = [CoordinatingController sharedInstance];
+    
+    UIViewController *viewController = [coordinatingController activeViewController];
+    
+    [self.window setRootViewController:viewController];
+    [self.window makeKeyWindow];
+    
     return YES;
 }
 
