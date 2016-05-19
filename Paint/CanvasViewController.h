@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CanvasView.h"
+#import "Scribble.h"
+#import "CanvasViewGenerator.h"
 
 @interface CanvasViewController : UIViewController
+
+@property (nonatomic, strong) CanvasView *canvasView;
+@property (nonatomic, strong) Scribble *scribble;
+@property (nonatomic, retain) UIColor *strokeColor;
+@property (nonatomic, assign) CGFloat strokeSize;
+
+- (void) loadCanvasViewWithGenerator:(CanvasViewGenerator *)generator;
 
 @end

@@ -12,6 +12,9 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    CanvasViewGenerator *defaultGenerator = [CanvasViewGenerator new];
+    [self loadCanvasViewWithGenerator:defaultGenerator];
 }
 
 @end
