@@ -35,6 +35,11 @@
     return sharedInstance;
 }
 
++ (id) allocWithZone:(NSZone *)zone
+{
+    return [self sharedInstance];
+}
+
 - (void) initialize
 {
     _canvasViewController = [[CanvasViewController alloc] init];

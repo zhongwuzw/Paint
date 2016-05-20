@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CanvasViewController.h"
 
 @interface CoordinatingController : UIViewController
 
 @property (nonatomic, readonly) UIViewController *activeViewController;
+@property (nonatomic, readonly) CanvasViewController *canvasViewController;
 
 + (instancetype)sharedInstance;
 

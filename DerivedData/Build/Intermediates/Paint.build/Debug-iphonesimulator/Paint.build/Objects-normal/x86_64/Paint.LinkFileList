@@ -1,7 +1,11 @@
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/CanvasViewController.o
+/Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/DeleteScribbleCommand.o
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/CanvasViewGenerator.o
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/CoordinatingController.o
+/Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/SetStrokeColorCommand.o
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/Vertex.o
+/Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/SaveScribbleCommand.o
+/Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/Command.o
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/Dot.o
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/ClothCanvasView.o
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/PaperCanvasViewGenerator.o
@@ -10,5 +14,10 @@
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/Scribble.o
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/Stroke.o
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/CanvasView.o
+/Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/PaletteViewController.o
+/Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/OpenScribbleCommand.o
+/Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/SetStrokeSizeCommand.o
+/Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/ScribbleManager.o
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/ClothCanvasViewGenerator.o
 /Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/main.o
+/Users/zhongwu/Documents/workspace/Paint/DerivedData/Build/Intermediates/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/x86_64/CommandSlider.o
