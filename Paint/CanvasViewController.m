@@ -7,6 +7,7 @@
 //
 
 #import "CanvasViewController.h"
+#import "Masonry.h"
 
 @implementation CanvasViewController
 
@@ -16,5 +17,22 @@
     CanvasViewGenerator *defaultGenerator = [CanvasViewGenerator new];
     [self loadCanvasViewWithGenerator:defaultGenerator];
 }
+
+#pragma mark -
+#pragma mark Loading a CanvasView from a CanvasViewGenerator
+
+- (void) loadCanvasViewWithGenerator:(CanvasViewGenerator *)generator
+{
+    [_canvasView removeFromSuperview];
+    
+    CanvasView *aCanvasView = [generator canvasViewWithFrame:CGRectZero];
+    [self setCanvasView:aCanvasView];
+    [self.view addSubview:self.canvasView];
+    
+    [self.canvasView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.edges.equalTo(_canvasView.superview);
+    }];
+}
+
 
 @end
