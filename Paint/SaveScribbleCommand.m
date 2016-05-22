@@ -9,7 +9,6 @@
 #import "SaveScribbleCommand.h"
 #import "ScribbleManager.h"
 #import "CoordinatingController.h"
-#import "UIView+UIImage.h"
 
 @implementation SaveScribbleCommand
 
