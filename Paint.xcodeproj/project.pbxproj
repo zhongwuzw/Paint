@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1E1E2C1CF3512E0003C984 /* CommandBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E1E2B1CF3512E0003C984 /* CommandBarButton.m */; };
+		0E1E1E301CF35C440003C984 /* UIView+UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E1E2F1CF35C440003C984 /* UIView+UIImage.m */; };
 		0E3218721CEEB4D500F9FB10 /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3218711CEEB4D500F9FB10 /* Command.m */; };
 		0E32187D1CEEB56D00F9FB10 /* SaveScribbleCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3218741CEEB56D00F9FB10 /* SaveScribbleCommand.m */; };
 		0E32187E1CEEB56D00F9FB10 /* DeleteScribbleCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3218761CEEB56D00F9FB10 /* DeleteScribbleCommand.m */; };
@@ -57,6 +59,10 @@
 
 /* Begin PBXFileReference section */
 		0AAB65F64F215D93510425E7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		0E1E1E2A1CF3512E0003C984 /* CommandBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandBarButton.h; sourceTree = "<group>"; };
+		0E1E1E2B1CF3512E0003C984 /* CommandBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandBarButton.m; sourceTree = "<group>"; };
+		0E1E1E2E1CF35C440003C984 /* UIView+UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIImage.h"; sourceTree = "<group>"; };
+		0E1E1E2F1CF35C440003C984 /* UIView+UIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIImage.m"; sourceTree = "<group>"; };
 		0E3218701CEEB4D500F9FB10 /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
 		0E3218711CEEB4D500F9FB10 /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Command.m; sourceTree = "<group>"; };
 		0E3218731CEEB56D00F9FB10 /* SaveScribbleCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveScribbleCommand.h; sourceTree = "<group>"; };
@@ -144,6 +150,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E1E1E2D1CF359CD0003C984 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E3218731CEEB56D00F9FB10 /* SaveScribbleCommand.h */,
+				0E3218741CEEB56D00F9FB10 /* SaveScribbleCommand.m */,
+				0E3218751CEEB56D00F9FB10 /* DeleteScribbleCommand.h */,
+				0E3218761CEEB56D00F9FB10 /* DeleteScribbleCommand.m */,
+				0E3218771CEEB56D00F9FB10 /* OpenScribbleCommand.h */,
+				0E3218781CEEB56D00F9FB10 /* OpenScribbleCommand.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		0E32186E1CEEB4B300F9FB10 /* Platte */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,14 +176,6 @@
 		0E32186F1CEEB4BD00F9FB10 /* Command */ = {
 			isa = PBXGroup;
 			children = (
-				0E3218701CEEB4D500F9FB10 /* Command.h */,
-				0E3218711CEEB4D500F9FB10 /* Command.m */,
-				0E3218731CEEB56D00F9FB10 /* SaveScribbleCommand.h */,
-				0E3218741CEEB56D00F9FB10 /* SaveScribbleCommand.m */,
-				0E3218751CEEB56D00F9FB10 /* DeleteScribbleCommand.h */,
-				0E3218761CEEB56D00F9FB10 /* DeleteScribbleCommand.m */,
-				0E3218771CEEB56D00F9FB10 /* OpenScribbleCommand.h */,
-				0E3218781CEEB56D00F9FB10 /* OpenScribbleCommand.m */,
 				0E3218791CEEB56D00F9FB10 /* SetStrokeSizeCommand.h */,
 				0E32187A1CEEB56D00F9FB10 /* SetStrokeSizeCommand.m */,
 				0E32187B1CEEB56D00F9FB10 /* SetStrokeColorCommand.h */,
@@ -201,6 +212,8 @@
 				0E458C9D1CED719700C6BDEE /* Dot.m */,
 				0E458C9F1CED732300C6BDEE /* Stroke.h */,
 				0E458CA01CED732300C6BDEE /* Stroke.m */,
+				0E3218701CEEB4D500F9FB10 /* Command.h */,
+				0E3218711CEEB4D500F9FB10 /* Command.m */,
 			);
 			name = "Common-Model";
 			sourceTree = "<group>";
@@ -225,6 +238,8 @@
 				0E458CB11CED9CC900C6BDEE /* ClothCanvasView.m */,
 				0E458CB31CED9CDE00C6BDEE /* PaperCanvasView.h */,
 				0E458CB41CED9CDE00C6BDEE /* PaperCanvasView.m */,
+				0E1E1E2A1CF3512E0003C984 /* CommandBarButton.h */,
+				0E1E1E2B1CF3512E0003C984 /* CommandBarButton.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -269,8 +284,8 @@
 		0E4F39F51CE5BF7700393C10 /* Paint */ = {
 			isa = PBXGroup;
 			children = (
-				0E32186E1CEEB4B300F9FB10 /* Platte */,
 				0E458C971CED51BD00C6BDEE /* Common-Model */,
+				0E32186E1CEEB4B300F9FB10 /* Platte */,
 				0ED69AB11CE9B7C9008AE0D8 /* Thumbnail */,
 				0ED69AB01CE9B7B8008AE0D8 /* Canvas */,
 				0ED69AAF1CE9B5B6008AE0D8 /* Utilities */,
@@ -316,6 +331,8 @@
 		0ED69AAF1CE9B5B6008AE0D8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0E1E1E2E1CF35C440003C984 /* UIView+UIImage.h */,
+				0E1E1E2F1CF35C440003C984 /* UIView+UIImage.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -323,6 +340,7 @@
 		0ED69AB01CE9B7B8008AE0D8 /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
+				0E1E1E2D1CF359CD0003C984 /* Model */,
 				0E458CB61CED9ED400C6BDEE /* Views-Manager */,
 				0E458CA31CED9A2000C6BDEE /* Views */,
 				0E458CA21CED9A0D00C6BDEE /* Controller */,
@@ -548,11 +566,13 @@
 				0E458CAC1CED9C6400C6BDEE /* PaperCanvasViewGenerator.m in Sources */,
 				0E4F39FB1CE5BF7700393C10 /* AppDelegate.m in Sources */,
 				0E458CB51CED9CDE00C6BDEE /* PaperCanvasView.m in Sources */,
+				0E1E1E2C1CF3512E0003C984 /* CommandBarButton.m in Sources */,
 				0E458CB91CED9EFB00C6BDEE /* Scribble.m in Sources */,
 				0E458CA11CED732300C6BDEE /* Stroke.m in Sources */,
 				0E458CA61CED9A3B00C6BDEE /* CanvasView.m in Sources */,
 				0E3218891CEEEA2500F9FB10 /* PaletteViewController.m in Sources */,
 				0E32187F1CEEB56D00F9FB10 /* OpenScribbleCommand.m in Sources */,
+				0E1E1E301CF35C440003C984 /* UIView+UIImage.m in Sources */,
 				0E3218801CEEB56D00F9FB10 /* SetStrokeSizeCommand.m in Sources */,
 				0E32188C1CEF178100F9FB10 /* ScribbleManager.m in Sources */,
 				0E458CAF1CED9C7F00C6BDEE /* ClothCanvasViewGenerator.m in Sources */,

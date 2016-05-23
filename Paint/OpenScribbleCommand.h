@@ -8,17 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Command.h"
-#import "ScribbleSource.h"
 
 @interface OpenScribbleCommand : Command 
-{
-  @private
-  id <ScribbleSource> scribbleSource_;
-}
-
-@property (nonatomic, retain) id <ScribbleSource> scribbleSource;
-
-- (id) initWithScribbleSource:(id <ScribbleSource>) aScribbleSource;
-- (void) execute;
-
+{}
 @end

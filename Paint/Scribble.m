@@ -7,7 +7,27 @@
 //
 
 #import "Scribble.h"
+#import "Stroke.h"
+
+@interface Scribble ()
+
+@property (nonatomic, strong) id <Mark> mark;
+
+@end
 
 @implementation Scribble
+
+@synthesize mark = _parentMark;
+
+- (id) init
+{
+    if (self = [super init])
+    {
+        _parentMark = [[Stroke alloc] init];
+    }
+    
+    return self;
+}
+
 
 @end

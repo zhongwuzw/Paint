@@ -18,11 +18,6 @@
 
 @implementation CoordinatingController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
 + (instancetype)sharedInstance
 {
     static CoordinatingController *sharedInstance = nil;
@@ -35,20 +30,10 @@
     return sharedInstance;
 }
 
-+ (id) allocWithZone:(NSZone *)zone
-{
-    return [self sharedInstance];
-}
-
 - (void) initialize
 {
     _canvasViewController = [[CanvasViewController alloc] init];
     _activeViewController = _canvasViewController;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    CoordinatingController *coordinatingController = [CoordinatingController new];
+    CoordinatingController *coordinatingController = [CoordinatingController sharedInstance];
     
     UIViewController *viewController = [coordinatingController activeViewController];
     

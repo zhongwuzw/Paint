@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CanvasViewController.h"
 
-@interface CoordinatingController : UIViewController
+@interface CoordinatingController : NSObject
 
 @property (nonatomic, readonly) UIViewController *activeViewController;
 @property (nonatomic, readonly) CanvasViewController *canvasViewController;

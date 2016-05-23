@@ -8,10 +8,12 @@
 
 #import "CanvasViewController.h"
 #import "Masonry.h"
+#import "CommandBarButton.h"
 
 @interface CanvasViewController ()
 
 @property (nonatomic, assign) CGPoint startPoint;
+@property (nonatomic, strong) UIToolbar *toolBar;
 
 @end
 
@@ -33,6 +35,35 @@
     
     self.strokeSize = sizeValue;
     self.strokeColor = [UIColor colorWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
+    
+    [self initializeToolBar];
+}
+
+- (void)initializeToolBar
+{
+    //set toolBar
+    self.toolBar = [UIToolbar new];
+    self.toolBar.barStyle = UIBarStyleBlackTranslucent;
+    self.toolBar.tintColor = [UIColor grayColor];
+    [self.view addSubview:self.toolBar];
+    
+    [self.toolBar mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.height.equalTo(@(44));
+    }];
+    
+    CommandBarButton *trashToolBar = [[CommandBarButton alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(handleCustomBarButtonHit:)];
+
+}
+
+#pragma mark - 
+#pragma mark handle barbutton
+
+- (void)handleCustomBarButtonHit:(CommandBarButton *)barButton
+{
+    
 }
 
 - (void) setScribble:(Scribble *)aScribble
@@ -70,6 +101,23 @@
     [self.canvasView mas_makeConstraints:^(MASConstraintMaker *make){
         make.edges.equalTo(_canvasView.superview);
     }];
+}
+
+#pragma mark -
+#pragma mark Scribble observer method
+
+- (void) observeValueForKeyPath:(NSString *)keyPath
+                       ofObject:(id)object
+                         change:(NSDictionary *)change
+                        context:(void *)context
+{
+    if ([object isKindOfClass:[Scribble class]] &&
+        [keyPath isEqualToString:@"mark"])
+    {
+        id <Mark> mark = [change objectForKey:NSKeyValueChangeNewKey];
+        [_canvasView setMark:mark];
+        [_canvasView setNeedsDisplay];
+    }
 }
 
 
