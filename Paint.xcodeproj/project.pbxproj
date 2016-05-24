@@ -36,6 +36,7 @@
 		0E4F3A061CE5BF7700393C10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4F3A041CE5BF7700393C10 /* LaunchScreen.storyboard */; };
 		0E4F3A111CE5BF7700393C10 /* PaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F3A101CE5BF7700393C10 /* PaintTests.m */; };
 		0E4F3A1C1CE5BF7700393C10 /* PaintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F3A1B1CE5BF7700393C10 /* PaintUITests.m */; };
+		0EBFE7371CF3DA9400EB9694 /* ScribbleMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBFE7361CF3DA9400EB9694 /* ScribbleMemento.m */; };
 		0ED69AB51CE9B9C8008AE0D8 /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED69AB41CE9B9C8008AE0D8 /* CanvasViewController.m */; };
 		91632646B62556CE268AB48A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F79A9D965B9B6A102DB59C1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,9 @@
 		0E4F3A171CE5BF7700393C10 /* PaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4F3A1B1CE5BF7700393C10 /* PaintUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintUITests.m; sourceTree = "<group>"; };
 		0E4F3A1D1CE5BF7700393C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EBFE7351CF3DA9400EB9694 /* ScribbleMemento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleMemento.h; sourceTree = "<group>"; };
+		0EBFE7361CF3DA9400EB9694 /* ScribbleMemento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleMemento.m; sourceTree = "<group>"; };
+		0EBFE7381CF46BC400EB9694 /* ScribbleMemento_Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleMemento_Friend.h; sourceTree = "<group>"; };
 		0ED69AB31CE9B9C8008AE0D8 /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
 		0ED69AB41CE9B9C8008AE0D8 /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
 		2F79A9D965B9B6A102DB59C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +163,9 @@
 				0E3218761CEEB56D00F9FB10 /* DeleteScribbleCommand.m */,
 				0E3218771CEEB56D00F9FB10 /* OpenScribbleCommand.h */,
 				0E3218781CEEB56D00F9FB10 /* OpenScribbleCommand.m */,
+				0EBFE7351CF3DA9400EB9694 /* ScribbleMemento.h */,
+				0EBFE7361CF3DA9400EB9694 /* ScribbleMemento.m */,
+				0EBFE7381CF46BC400EB9694 /* ScribbleMemento_Friend.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -572,6 +579,7 @@
 				0E458CA61CED9A3B00C6BDEE /* CanvasView.m in Sources */,
 				0E3218891CEEEA2500F9FB10 /* PaletteViewController.m in Sources */,
 				0E32187F1CEEB56D00F9FB10 /* OpenScribbleCommand.m in Sources */,
+				0EBFE7371CF3DA9400EB9694 /* ScribbleMemento.m in Sources */,
 				0E1E1E301CF35C440003C984 /* UIView+UIImage.m in Sources */,
 				0E3218801CEEB56D00F9FB10 /* SetStrokeSizeCommand.m in Sources */,
 				0E32188C1CEF178100F9FB10 /* ScribbleManager.m in Sources */,

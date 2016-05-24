@@ -5,4 +5,5 @@ dependencies: \
   /Users/zhongwu/Documents/workspace/Paint/Paint/CanvasView.h \
   /Users/zhongwu/Documents/workspace/Paint/Paint/Scribble.h \
   /Users/zhongwu/Documents/workspace/Paint/Paint/Mark.h \
+  /Users/zhongwu/Documents/workspace/Paint/Paint/ScribbleMemento.h \
   /Users/zhongwu/Documents/workspace/Paint/Paint/CanvasViewGenerator.h

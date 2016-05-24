@@ -4,4 +4,7 @@ dependencies: \
   /Users/zhongwu/Documents/workspace/Paint/Paint/CanvasView.h \
   /Users/zhongwu/Documents/workspace/Paint/Paint/Scribble.h \
   /Users/zhongwu/Documents/workspace/Paint/Paint/Mark.h \
-  /Users/zhongwu/Documents/workspace/Paint/Paint/CanvasViewGenerator.h
+  /Users/zhongwu/Documents/workspace/Paint/Paint/ScribbleMemento.h \
+  /Users/zhongwu/Documents/workspace/Paint/Paint/CanvasViewGenerator.h \
+  /Users/zhongwu/Documents/workspace/Paint/Paint/CommandBarButton.h \
+  /Users/zhongwu/Documents/workspace/Paint/Paint/Command.h

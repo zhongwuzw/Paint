@@ -55,6 +55,8 @@
     }];
     
     CommandBarButton *trashToolBar = [[CommandBarButton alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(handleCustomBarButtonHit:)];
+    
+    [self.toolBar setItems:@[trashToolBar] animated:YES];
 
 }
 
@@ -101,6 +103,19 @@
     [self.canvasView mas_makeConstraints:^(MASConstraintMaker *make){
         make.edges.equalTo(_canvasView.superview);
     }];
+}
+
+#pragma mark -
+#pragma mark Touch Event Handlers
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    _startPoint = [[touches anyObject] locationInView:_canvasView];
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
 }
 
 #pragma mark -
