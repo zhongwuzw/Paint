@@ -11,6 +11,7 @@
 #import "CommandBarButton.h"
 #import "Stroke.h"
 #import "Vertex.h"
+#import "Dot.h"
 
 @interface CanvasViewController ()
 
@@ -141,6 +142,26 @@
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    CGPoint lastPoint = [[touches anyObject] previousLocationInView:_canvasView];
+    CGPoint thisPoint = [[touches anyObject] locationInView:_canvasView];
+    
+    if (CGPointEqualToPoint(lastPoint, thisPoint))
+    {
+        Dot *singleDot = [[Dot alloc]
+                           initWithLocation:thisPoint];
+        [singleDot setColor:_strokeColor];
+        [singleDot setSize:_strokeSize];
+        
+        NSInvocation *drawInvocation = [self drawScribbleInvocation];
+        [drawInvocation setArgument:&singleDot atIndex:2];
+        
+        NSInvocation *undrawInvocation = [self undrawScribbleInvocation];
+        [undrawInvocation setArgument:&singleDot atIndex:2];
+        
+        [self executeInvocation:drawInvocation withUndoInvocation:undrawInvocation];
+    }
+    
+    _startPoint = CGPointZero;
     
 }
 

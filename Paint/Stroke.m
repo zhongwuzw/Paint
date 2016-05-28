@@ -60,6 +60,23 @@
     }
 }
 
+- (id <Mark>) childMarkAtIndex:(NSUInteger) index
+{
+    if (index >= [_children count]) return nil;
+    
+    return [_children objectAtIndex:index];
+}
+
+- (id <Mark>) lastChild
+{
+    return [_children lastObject];
+}
+
+- (NSUInteger) count
+{
+    return [_children count];
+}
+
 #pragma mark -
 #pragma mark NSCopying method
 

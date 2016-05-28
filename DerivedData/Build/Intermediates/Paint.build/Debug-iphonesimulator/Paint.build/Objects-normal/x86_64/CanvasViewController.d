@@ -9,4 +9,5 @@ dependencies: \
   /Users/zhongwu/Documents/workspace/Paint/Paint/CommandBarButton.h \
   /Users/zhongwu/Documents/workspace/Paint/Paint/Command.h \
   /Users/zhongwu/Documents/workspace/Paint/Paint/Stroke.h \
-  /Users/zhongwu/Documents/workspace/Paint/Paint/Vertex.h
+  /Users/zhongwu/Documents/workspace/Paint/Paint/Vertex.h \
+  /Users/zhongwu/Documents/workspace/Paint/Paint/Dot.h

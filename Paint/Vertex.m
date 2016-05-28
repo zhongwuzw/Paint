@@ -15,6 +15,7 @@
 @implementation Vertex
 
 @synthesize location;
+@dynamic color,size;
 
 - (id) initWithLocation:(CGPoint) aLocation
 {
@@ -25,6 +26,18 @@
     
     return self;
 }
+
+- (void) setColor:(UIColor *)color {}
+- (UIColor *) color { return nil; }
+- (void) setSize:(CGFloat)size {}
+- (CGFloat) size { return 0.0; }
+
+- (void) addMark:(id <Mark>) mark {}
+- (void) removeMark:(id <Mark>) mark {}
+- (id <Mark>) childMarkAtIndex:(NSUInteger) index { return nil; }
+- (id <Mark>) lastChild { return nil; }
+- (NSUInteger) count { return 0; }
+- (NSEnumerator *) enumerator { return nil; }
 
 #pragma mark -
 #pragma mark NSCopying method

@@ -10,6 +10,8 @@
 
 @implementation Dot
 
+@synthesize color,size;
+
 #pragma mark -
 #pragma mark NSCopying method
 
