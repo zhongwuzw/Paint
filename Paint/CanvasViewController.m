@@ -9,6 +9,8 @@
 #import "CanvasViewController.h"
 #import "Masonry.h"
 #import "CommandBarButton.h"
+#import "Stroke.h"
+#import "Vertex.h"
 
 @interface CanvasViewController ()
 
@@ -115,6 +117,30 @@
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    CGPoint lastPoint = [[touches anyObject] previousLocationInView:_canvasView];
+    
+    if (CGPointEqualToPoint(lastPoint, _startPoint)) {
+        id<Mark> newStroke = [Stroke new];
+        newStroke.color = _strokeColor;
+        newStroke.size = _strokeSize;
+        
+        NSInvocation *drawInvocation = [self drawScribbleInvocation];
+        [drawInvocation setArgument:&newStroke atIndex:2];
+        
+        NSInvocation *undrawInvocation = [self undrawScribbleInvocation];
+        [undrawInvocation setArgument:&newStroke atIndex:2];
+
+        [self executeInvocation:drawInvocation withUndoInvocation:undrawInvocation];
+    }
+    
+    CGPoint thisPoint = [[touches anyObject] locationInView:_canvasView];
+    Vertex *vertex = [[Vertex alloc] initWithLocation:thisPoint];
+    
+    [_scribble addMark:vertex shouldAddToPreviousMark:YES];
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
     
 }
 
@@ -133,6 +159,65 @@
         [_canvasView setMark:mark];
         [_canvasView setNeedsDisplay];
     }
+}
+
+
+#pragma mark -
+#pragma mark Draw Scribble Invocation Generation Methods
+
+- (NSInvocation *) drawScribbleInvocation
+{
+    NSMethodSignature *executeMethodSignature = [_scribble
+                                                 methodSignatureForSelector:
+                                                 @selector(addMark:
+                                                           shouldAddToPreviousMark:)];
+    NSInvocation *drawInvocation = [NSInvocation
+                                    invocationWithMethodSignature:
+                                    executeMethodSignature];
+    [drawInvocation setTarget:_scribble];
+    [drawInvocation setSelector:@selector(addMark:shouldAddToPreviousMark:)];
+    BOOL attachToPreviousMark = NO;
+    [drawInvocation setArgument:&attachToPreviousMark atIndex:3];
+    
+    return drawInvocation;
+}
+
+- (NSInvocation *) undrawScribbleInvocation
+{
+    NSMethodSignature *unexecuteMethodSignature = [_scribble
+                                                   methodSignatureForSelector:
+                                                   @selector(removeMark:)];
+    NSInvocation *undrawInvocation = [NSInvocation
+                                      invocationWithMethodSignature:
+                                      unexecuteMethodSignature];
+    [undrawInvocation setTarget:_scribble];
+    [undrawInvocation setSelector:@selector(removeMark:)];
+    
+    return undrawInvocation;
+}
+
+#pragma mark Draw Scribble Command Methods
+
+- (void) executeInvocation:(NSInvocation *)invocation
+        withUndoInvocation:(NSInvocation *)undoInvocation
+{
+    [invocation retainArguments];
+    
+    [[self.undoManager prepareWithInvocationTarget:self]
+     unexecuteInvocation:undoInvocation
+     withRedoInvocation:invocation];
+    
+    [invocation invoke];
+}
+
+- (void) unexecuteInvocation:(NSInvocation *)invocation
+          withRedoInvocation:(NSInvocation *)redoInvocation
+{
+    [[self.undoManager prepareWithInvocationTarget:self]
+     executeInvocation:redoInvocation
+     withUndoInvocation:invocation];
+    
+    [invocation invoke];
 }
 
 
