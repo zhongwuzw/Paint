@@ -12,6 +12,9 @@
 #import "Stroke.h"
 #import "Vertex.h"
 #import "Dot.h"
+#import "DeleteScribbleCommand.h"
+#import "SaveScribbleCommand.h"
+#import "CoordinatingController.h"
 
 @interface CanvasViewController ()
 
@@ -58,17 +61,47 @@
     }];
     
     CommandBarButton *trashToolBar = [[CommandBarButton alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(handleCustomBarButtonHit:)];
+    trashToolBar.command = [DeleteScribbleCommand new];
     
-    [self.toolBar setItems:@[trashToolBar] animated:YES];
+    CommandBarButton *saveToolBar = [[CommandBarButton alloc] initWithImage:[UIImage imageNamed:@"save"] style:UIBarButtonItemStylePlain target:self action:@selector(handleViewControllerRequest:)];
+    saveToolBar.command = [SaveScribbleCommand new];
+    
+    UIBarButtonItem *undoToolBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"undo"] style:UIBarButtonItemStylePlain target:self action:@selector(onCustomBarButtonHit:)];
+    [undoToolBar setTag:4];
+    
+    UIBarButtonItem *redoToolBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"redo"] style:UIBarButtonItemStylePlain target:self action:@selector(onCustomBarButtonHit:)];
+    [redoToolBar setTag:5];
+    
+    [self.toolBar setItems:@[trashToolBar,saveToolBar,undoToolBar,redoToolBar] animated:YES];
 
 }
 
 #pragma mark - 
 #pragma mark handle barbutton
 
+
+- (void)onCustomBarButtonHit:(id)button
+{
+    UIBarButtonItem *barButton = button;
+    
+    if ([barButton tag] == 4)
+    {
+        [self.undoManager undo];
+    }
+    else if ([barButton tag] == 5)
+    {
+        [self.undoManager redo];
+    }
+}
+                                     
+- (void)handleViewControllerRequest:(id)button
+{
+    [[CoordinatingController sharedInstance] ]
+}
+
 - (void)handleCustomBarButtonHit:(CommandBarButton *)barButton
 {
-    
+    [[barButton command] execute];
 }
 
 - (void) setScribble:(Scribble *)aScribble
@@ -241,5 +274,19 @@
     [invocation invoke];
 }
 
+#pragma mark -
+#pragma mark Stroke color and size accessor methods
+
+- (void) setStrokeSize:(CGFloat) aSize
+{
+    if (aSize < 5.0)
+    {
+        _strokeSize = 5.0;
+    }
+    else
+    {
+        _strokeSize = aSize;
+    }
+}
 
 @end

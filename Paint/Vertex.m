@@ -38,6 +38,12 @@
 - (id <Mark>) lastChild { return nil; }
 - (NSUInteger) count { return 0; }
 - (NSEnumerator *) enumerator { return nil; }
+- (void) enumerateMarksUsingBlock:(void (^)(id <Mark> item, BOOL *stop)) block {}
+
+- (void) acceptMarkVisitor:(id <MarkVisitor>)visitor
+{
+    [visitor visitVertex:self];
+}
 
 #pragma mark -
 #pragma mark NSCopying method
@@ -49,5 +55,22 @@
     return vertexCopy;
 }
 
+#pragma mark -
+#pragma mark NSCoder methods
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    if (self = [super init])
+    {
+        location = [(NSValue *)[coder decodeObjectForKey:@"VertexLocation"] CGPointValue];
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:[NSValue valueWithCGPoint:location] forKey:@"VertexLocation"];
+}
 
 @end

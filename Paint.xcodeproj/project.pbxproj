@@ -37,6 +37,9 @@
 		0E4F3A111CE5BF7700393C10 /* PaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F3A101CE5BF7700393C10 /* PaintTests.m */; };
 		0E4F3A1C1CE5BF7700393C10 /* PaintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F3A1B1CE5BF7700393C10 /* PaintUITests.m */; };
 		0EBFE7371CF3DA9400EB9694 /* ScribbleMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBFE7361CF3DA9400EB9694 /* ScribbleMemento.m */; };
+		0EC6CBB31CFC1F6400A87400 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6CBB21CFC1F6400A87400 /* NSMutableArray+Stack.m */; };
+		0EC6CBB61CFC20B400A87400 /* MarkEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6CBB51CFC20B400A87400 /* MarkEnumerator.m */; };
+		0EC6CBBA1CFC2EE600A87400 /* MarkRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6CBB91CFC2EE600A87400 /* MarkRenderer.m */; };
 		0ED69AB51CE9B9C8008AE0D8 /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED69AB41CE9B9C8008AE0D8 /* CanvasViewController.m */; };
 		91632646B62556CE268AB48A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F79A9D965B9B6A102DB59C1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -122,6 +125,13 @@
 		0EBFE7351CF3DA9400EB9694 /* ScribbleMemento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleMemento.h; sourceTree = "<group>"; };
 		0EBFE7361CF3DA9400EB9694 /* ScribbleMemento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleMemento.m; sourceTree = "<group>"; };
 		0EBFE7381CF46BC400EB9694 /* ScribbleMemento_Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleMemento_Friend.h; sourceTree = "<group>"; };
+		0EC6CBB11CFC1F6400A87400 /* NSMutableArray+Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Stack.h"; sourceTree = "<group>"; };
+		0EC6CBB21CFC1F6400A87400 /* NSMutableArray+Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Stack.m"; sourceTree = "<group>"; };
+		0EC6CBB41CFC20B400A87400 /* MarkEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkEnumerator.h; sourceTree = "<group>"; };
+		0EC6CBB51CFC20B400A87400 /* MarkEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkEnumerator.m; sourceTree = "<group>"; };
+		0EC6CBB71CFC2DC300A87400 /* MarkVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkVisitor.h; sourceTree = "<group>"; };
+		0EC6CBB81CFC2EE600A87400 /* MarkRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkRenderer.h; sourceTree = "<group>"; };
+		0EC6CBB91CFC2EE600A87400 /* MarkRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkRenderer.m; sourceTree = "<group>"; };
 		0ED69AB31CE9B9C8008AE0D8 /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
 		0ED69AB41CE9B9C8008AE0D8 /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
 		2F79A9D965B9B6A102DB59C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +176,11 @@
 				0EBFE7351CF3DA9400EB9694 /* ScribbleMemento.h */,
 				0EBFE7361CF3DA9400EB9694 /* ScribbleMemento.m */,
 				0EBFE7381CF46BC400EB9694 /* ScribbleMemento_Friend.h */,
+				0EC6CBB41CFC20B400A87400 /* MarkEnumerator.h */,
+				0EC6CBB51CFC20B400A87400 /* MarkEnumerator.m */,
+				0EC6CBB71CFC2DC300A87400 /* MarkVisitor.h */,
+				0EC6CBB81CFC2EE600A87400 /* MarkRenderer.h */,
+				0EC6CBB91CFC2EE600A87400 /* MarkRenderer.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -340,6 +355,8 @@
 			children = (
 				0E1E1E2E1CF35C440003C984 /* UIView+UIImage.h */,
 				0E1E1E2F1CF35C440003C984 /* UIView+UIImage.m */,
+				0EC6CBB11CFC1F6400A87400 /* NSMutableArray+Stack.h */,
+				0EC6CBB21CFC1F6400A87400 /* NSMutableArray+Stack.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -568,16 +585,19 @@
 				0E458C9B1CED539A00C6BDEE /* Vertex.m in Sources */,
 				0E32187D1CEEB56D00F9FB10 /* SaveScribbleCommand.m in Sources */,
 				0E3218721CEEB4D500F9FB10 /* Command.m in Sources */,
+				0EC6CBB61CFC20B400A87400 /* MarkEnumerator.m in Sources */,
 				0E458C9E1CED719700C6BDEE /* Dot.m in Sources */,
 				0E458CB21CED9CC900C6BDEE /* ClothCanvasView.m in Sources */,
 				0E458CAC1CED9C6400C6BDEE /* PaperCanvasViewGenerator.m in Sources */,
 				0E4F39FB1CE5BF7700393C10 /* AppDelegate.m in Sources */,
 				0E458CB51CED9CDE00C6BDEE /* PaperCanvasView.m in Sources */,
 				0E1E1E2C1CF3512E0003C984 /* CommandBarButton.m in Sources */,
+				0EC6CBBA1CFC2EE600A87400 /* MarkRenderer.m in Sources */,
 				0E458CB91CED9EFB00C6BDEE /* Scribble.m in Sources */,
 				0E458CA11CED732300C6BDEE /* Stroke.m in Sources */,
 				0E458CA61CED9A3B00C6BDEE /* CanvasView.m in Sources */,
 				0E3218891CEEEA2500F9FB10 /* PaletteViewController.m in Sources */,
+				0EC6CBB31CFC1F6400A87400 /* NSMutableArray+Stack.m in Sources */,
 				0E32187F1CEEB56D00F9FB10 /* OpenScribbleCommand.m in Sources */,
 				0EBFE7371CF3DA9400EB9694 /* ScribbleMemento.m in Sources */,
 				0E1E1E301CF35C440003C984 /* UIView+UIImage.m in Sources */,

@@ -24,4 +24,12 @@
 
 - (id)copyWithZone:(NSZone *)zone;
 
+- (NSEnumerator *) enumerator;
+- (void) enumerateMarksUsingBlock:(void (^)(id <Mark> item, BOOL *stop)) block;
+
+- (id)initWithCoder:(NSCoder *)coder;
+- (void)encodeWithCoder:(NSCoder *)coder;
+
+- (void) acceptMarkVisitor:(id <MarkVisitor>)visitor;
+
 @end

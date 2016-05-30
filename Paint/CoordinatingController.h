@@ -9,12 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "CanvasViewController.h"
 
+typedef enum
+{
+    kButtonTagDone,
+    kButtonTagOpenPaletteView,
+    kButtonTagOpenThumbnailView
+} ButtonTag;
+
 @interface CoordinatingController : NSObject
 
 @property (nonatomic, readonly) UIViewController *activeViewController;
 @property (nonatomic, readonly) CanvasViewController *canvasViewController;
 
 + (instancetype)sharedInstance;
+
+- (void)requestViewChangeByObject:(id)object;
 
 @end
 

@@ -15,4 +15,9 @@
 
 - (id) copyWithZone:(NSZone *)zone;
 
+- (id)initWithCoder:(NSCoder *)coder;
+- (void)encodeWithCoder:(NSCoder *)coder;
+
+- (void) acceptMarkVisitor:(id <MarkVisitor>)visitor;
+
 @end

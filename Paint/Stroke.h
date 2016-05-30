@@ -17,6 +17,18 @@
 @property (nonatomic, readonly) NSUInteger count;
 @property (nonatomic, readonly) id <Mark> lastChild;
 
+- (void) addMark:(id <Mark>) mark;
+- (void) removeMark:(id <Mark>) mark;
+- (id <Mark>) childMarkAtIndex:(NSUInteger) index;
+
 - (id) copyWithZone:(NSZone *)zone;
+
+- (NSEnumerator *) enumerator;
+- (void) enumerateMarksUsingBlock:(void (^)(id <Mark> item, BOOL *stop)) block;
+
+- (id)initWithCoder:(NSCoder *)coder;
+- (void)encodeWithCoder:(NSCoder *)coder;
+
+- (void) acceptMarkVisitor:(id <MarkVisitor>)visitor;
 
 @end

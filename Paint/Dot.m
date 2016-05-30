@@ -12,6 +12,11 @@
 
 @synthesize color,size;
 
+- (void) acceptMarkVisitor:(id <MarkVisitor>)visitor
+{
+    [visitor visitDot:self];
+}
+
 #pragma mark -
 #pragma mark NSCopying method
 
@@ -25,4 +30,26 @@
     
     return dotCopy;
 }
+
+#pragma mark -
+#pragma mark NSCoder methods
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    if (self = [super initWithCoder:coder])
+    {
+        color = [coder decodeObjectForKey:@"DotColor"];
+        size = [coder decodeFloatForKey:@"DotSize"];
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [super encodeWithCoder:coder];
+    [coder encodeObject:color forKey:@"DotColor"];
+    [coder encodeFloat:size forKey:@"DotSize"];
+}
+
 @end

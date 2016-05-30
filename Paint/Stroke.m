@@ -7,6 +7,7 @@
 //
 
 #import "Stroke.h"
+#import "MarkEnumerator.h"
 
 @interface Stroke ()
 
@@ -77,6 +78,16 @@
     return [_children count];
 }
 
+- (void) acceptMarkVisitor:(id <MarkVisitor>)visitor
+{
+    for (id <Mark> dot in _children)
+    {
+        [dot acceptMarkVisitor:visitor];
+    }
+    
+    [visitor visitStroke:self];
+}
+
 #pragma mark -
 #pragma mark NSCopying method
 
@@ -96,6 +107,53 @@
     }
     
     return strokeCopy;
+}
+
+#pragma mark -
+#pragma mark enumerator methods
+
+- (NSEnumerator *) enumerator
+{
+    return [[MarkEnumerator alloc] initWithMark:self];
+}
+
+- (void) enumerateMarksUsingBlock:(void (^)(id <Mark> item, BOOL *stop)) block
+{
+    if(!block)
+        return;
+    
+    BOOL stop = NO;
+    
+    NSEnumerator *enumerator = [self enumerator];
+    
+    for (id <Mark> mark in enumerator)
+    {
+        block (mark, &stop);
+        if (stop)
+            break;
+    }
+}
+
+#pragma mark -
+#pragma mark NSCoder methods
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    if (self = [super init])
+    {
+        color = [coder decodeObjectForKey:@"StrokeColor"];
+        size = [coder decodeFloatForKey:@"StrokeSize"];
+        _children = [coder decodeObjectForKey:@"StrokeChildren"];
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:color forKey:@"StrokeColor"];
+    [coder encodeFloat:size forKey:@"StrokeSize"];
+    [coder encodeObject:_children forKey:@"StrokeChildren"];
 }
 
 @end
