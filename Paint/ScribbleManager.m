@@ -8,6 +8,7 @@
 
 #import "ScribbleManager.h"
 #import "Scribble.h"
+#import "ThumbnailModel.h"
 
 #define kScribbleDataPath [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/data"]
 #define kScribbleThumbnailPath [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/thumbnails"]
@@ -22,8 +23,6 @@
     NSString *scribbleThumbnailName = [NSString stringWithFormat:@"thumbnail_%ld.png",
                                        (long)newIndex];
     
-    // get a memento from the scribble
-    // then save the memento in the file system
     ScribbleMemento *scribbleMemento = [scribble scribbleMemento];
     NSData *mementoData = [scribbleMemento data];
     NSString *mementoPath = [[self scribbleDataPath]
@@ -69,6 +68,36 @@
                                                                        error:&error];
     
     return scribbleDataPathsArray;
+}
+
+- (NSArray*) scribbleThumbnailPaths
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *scribbleThumbnailPathsArray = [fileManager contentsOfDirectoryAtPath:[self scribbleThumbnailPath]
+                                                                            error:&error];
+    return scribbleThumbnailPathsArray;
+}
+
+- (ThumbnailModel *)scribbleThumbnailViewAtIndex:(NSInteger)index
+{
+    ThumbnailModel *thumbnailModel = [ThumbnailModel new];
+    
+    NSArray *scribbleThumbnailPathsArray = [self scribbleThumbnailPaths];
+    NSArray *scribblePathsArray = [self scribbleDataPaths];
+    
+    NSString *scribbleThumbnailPath = [scribbleThumbnailPathsArray objectAtIndex:index];
+    NSString *scribblePath = [scribblePathsArray objectAtIndex:index];
+    
+    if (scribbleThumbnailPath) {
+        thumbnailModel.imagePath = [kScribbleThumbnailPath
+                                    stringByAppendingPathComponent:
+                                    scribbleThumbnailPath];
+        thumbnailModel.scribblePath = [kScribbleDataPath
+                                       stringByAppendingPathComponent:
+                                       scribblePath];
+    }
+    return thumbnailModel;
 }
 
 #pragma mark -

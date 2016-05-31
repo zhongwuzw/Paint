@@ -23,7 +23,9 @@
     
     UIViewController *viewController = [coordinatingController activeViewController];
     
-    [self.window setRootViewController:viewController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    [self.window setRootViewController:navigationController];
     [self.window makeKeyWindow];
     
     return YES;

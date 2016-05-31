@@ -63,8 +63,14 @@
     CommandBarButton *trashToolBar = [[CommandBarButton alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(handleCustomBarButtonHit:)];
     trashToolBar.command = [DeleteScribbleCommand new];
     
-    CommandBarButton *saveToolBar = [[CommandBarButton alloc] initWithImage:[UIImage imageNamed:@"save"] style:UIBarButtonItemStylePlain target:self action:@selector(handleViewControllerRequest:)];
+    CommandBarButton *saveToolBar = [[CommandBarButton alloc] initWithImage:[UIImage imageNamed:@"save"] style:UIBarButtonItemStylePlain target:self action:@selector(handleCustomBarButtonHit:)];
     saveToolBar.command = [SaveScribbleCommand new];
+    
+    UIBarButtonItem *openToolBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"open"] style:UIBarButtonItemStylePlain target:self action:@selector(handleViewControllerRequest:)];
+    openToolBar.tag = 2;
+    
+    UIBarButtonItem *paletteToolBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"palette"] style:UIBarButtonItemStylePlain target:self action:@selector(handleViewControllerRequest:)];
+    paletteToolBar.tag = 1;
     
     UIBarButtonItem *undoToolBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"undo"] style:UIBarButtonItemStylePlain target:self action:@selector(onCustomBarButtonHit:)];
     [undoToolBar setTag:4];
@@ -72,7 +78,9 @@
     UIBarButtonItem *redoToolBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"redo"] style:UIBarButtonItemStylePlain target:self action:@selector(onCustomBarButtonHit:)];
     [redoToolBar setTag:5];
     
-    [self.toolBar setItems:@[trashToolBar,saveToolBar,undoToolBar,redoToolBar] animated:YES];
+    UIBarButtonItem *spaceToolBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    [self.toolBar setItems:@[trashToolBar,spaceToolBar,saveToolBar,spaceToolBar,openToolBar,spaceToolBar,paletteToolBar,spaceToolBar,undoToolBar,spaceToolBar,redoToolBar] animated:YES];
 
 }
 
@@ -96,7 +104,7 @@
                                      
 - (void)handleViewControllerRequest:(id)button
 {
-    [[CoordinatingController sharedInstance] ]
+    [[CoordinatingController sharedInstance] requestViewChangeByObject:button];
 }
 
 - (void)handleCustomBarButtonHit:(CommandBarButton *)barButton

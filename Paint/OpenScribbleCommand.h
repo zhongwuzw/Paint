@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Command.h"
+#import "ThumbnailModel.h"
 
-@interface OpenScribbleCommand : Command 
-{}
+@interface OpenScribbleCommand : Command
+
+@property (nonatomic, strong) ThumbnailModel *scribbleSource;
+
+- (id) initWithScribbleSource:(ThumbnailModel *)aScribbleSource;
+- (void) execute;
+
 @end

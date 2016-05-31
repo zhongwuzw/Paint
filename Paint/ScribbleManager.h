@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Scribble;
+@class Scribble,ThumbnailModel;
 @import UIKit;
 
 @interface ScribbleManager : NSObject
@@ -16,7 +16,7 @@
 - (void) saveScribble:(Scribble *)scribble thumbnail:(UIImage *)image;
 - (NSInteger) numberOfScribbles;
 - (Scribble *) scribbleAtIndex:(NSInteger)index;
-- (UIView *) scribbleThumbnailViewAtIndex:(NSInteger)index;
+- (ThumbnailModel *) scribbleThumbnailViewAtIndex:(NSInteger)index;
 
 
 @end

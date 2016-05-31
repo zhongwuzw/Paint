@@ -8,6 +8,8 @@
 
 #import "CoordinatingController.h"
 #import "CanvasViewController.h"
+#import "PaletteViewController.h"
+#import "ThumbnailViewController.h"
 
 @interface CoordinatingController ()
 
@@ -48,60 +50,39 @@
         {
             case kButtonTagOpenPaletteView:
             {
-                // load a PaletteViewController
-                PaletteViewController *controller = [[[PaletteViewController alloc] init] autorelease];
+                PaletteViewController *controller = [[PaletteViewController alloc] init];
                 
-                // transition to the PaletteViewController
-                [canvasViewController_ presentModalViewController:controller
-                                                         animated:YES];
+                [_canvasViewController.navigationController pushViewController:controller animated:YES];
                 
-                // set the activeViewController to
-                // paletteViewController
-                activeViewController_ = controller;
+                _activeViewController = controller;
             }
                 break;
             case kButtonTagOpenThumbnailView:
             {
-                // load a ThumbnailViewController
-                ThumbnailViewController *controller = [[[ThumbnailViewController alloc] init] autorelease];
+                UICollectionViewFlowLayout *collectionLayout = [UICollectionViewFlowLayout new];
+                collectionLayout.itemSize = CGSizeMake(90, 130);
                 
+                ThumbnailViewController *controller = [[ThumbnailViewController alloc] initWithCollectionViewLayout:collectionLayout];
                 
-                // transition to the ThumbnailViewController
-                [canvasViewController_ presentModalViewController:controller
-                                                         animated:YES];
+                [_canvasViewController.navigationController pushViewController:controller animated:YES];
                 
-                // set the activeViewController to
-                // ThumbnailViewController
-                activeViewController_ = controller;
+                _activeViewController = controller;
             }
                 break;
             default:
-                // just go back to the main canvasViewController
-                // for the other types
             {
-                // The Done command is shared on every
-                // view controller except the CanvasViewController
-                // When the Done button is hit, it should
-                // take the user back to the first page in
-                // conjunction with the design
-                // other objects will follow the same path
-                [canvasViewController_ dismissModalViewControllerAnimated:YES];
+                [_canvasViewController.navigationController popViewControllerAnimated:YES];
                 
-                // set the activeViewController back to
-                // canvasViewController
-                activeViewController_ = canvasViewController_;
+                _activeViewController = _canvasViewController;
             }
                 break;
         }
     }
-    // every thing else goes to the main canvasViewController
     else 
     {
-        [canvasViewController_ dismissModalViewControllerAnimated:YES];
-        
-        // set the activeViewController back to 
-        // canvasViewController
-        activeViewController_ = canvasViewController_;
+        [_canvasViewController.navigationController popViewControllerAnimated:YES];
+
+        _activeViewController = _canvasViewController;
     }
     
 }

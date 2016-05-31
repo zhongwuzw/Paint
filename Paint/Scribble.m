@@ -101,16 +101,10 @@
 {
     id <Mark> mementoMark = _incrementalMark;
     
-    // if the resulting memento asks
-    // for a complete snapshot, then
-    // set it with parentMark_
     if (hasCompleteSnapshot)
     {
         mementoMark = _parentMark;
     }
-    // but if incrementalMark_
-    // is nil then we can't do anything
-    // but bail out
     else if (mementoMark == nil)
     {
         return nil;

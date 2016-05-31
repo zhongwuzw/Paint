@@ -36,6 +36,10 @@
 		0E4F3A061CE5BF7700393C10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4F3A041CE5BF7700393C10 /* LaunchScreen.storyboard */; };
 		0E4F3A111CE5BF7700393C10 /* PaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F3A101CE5BF7700393C10 /* PaintTests.m */; };
 		0E4F3A1C1CE5BF7700393C10 /* PaintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F3A1B1CE5BF7700393C10 /* PaintUITests.m */; };
+		0E8571341CFD45AF00116679 /* ThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8571331CFD45AF00116679 /* ThumbnailViewController.m */; };
+		0E8571381CFD751200116679 /* ThumbnailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8571371CFD751200116679 /* ThumbnailViewCell.m */; };
+		0E85713C1CFD773E00116679 /* ThumbnailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E85713B1CFD773E00116679 /* ThumbnailModel.m */; };
+		0E85713D1CFD77EE00116679 /* ScribbleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E32188B1CEF178100F9FB10 /* ScribbleManager.m */; };
 		0EBFE7371CF3DA9400EB9694 /* ScribbleMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBFE7361CF3DA9400EB9694 /* ScribbleMemento.m */; };
 		0EC6CBB31CFC1F6400A87400 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6CBB21CFC1F6400A87400 /* NSMutableArray+Stack.m */; };
 		0EC6CBB61CFC20B400A87400 /* MarkEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6CBB51CFC20B400A87400 /* MarkEnumerator.m */; };
@@ -122,6 +126,12 @@
 		0E4F3A171CE5BF7700393C10 /* PaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4F3A1B1CE5BF7700393C10 /* PaintUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintUITests.m; sourceTree = "<group>"; };
 		0E4F3A1D1CE5BF7700393C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E8571321CFD45AF00116679 /* ThumbnailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailViewController.h; sourceTree = "<group>"; };
+		0E8571331CFD45AF00116679 /* ThumbnailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailViewController.m; sourceTree = "<group>"; };
+		0E8571361CFD751200116679 /* ThumbnailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailViewCell.h; sourceTree = "<group>"; };
+		0E8571371CFD751200116679 /* ThumbnailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailViewCell.m; sourceTree = "<group>"; };
+		0E85713A1CFD773E00116679 /* ThumbnailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailModel.h; sourceTree = "<group>"; };
+		0E85713B1CFD773E00116679 /* ThumbnailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailModel.m; sourceTree = "<group>"; };
 		0EBFE7351CF3DA9400EB9694 /* ScribbleMemento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleMemento.h; sourceTree = "<group>"; };
 		0EBFE7361CF3DA9400EB9694 /* ScribbleMemento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleMemento.m; sourceTree = "<group>"; };
 		0EBFE7381CF46BC400EB9694 /* ScribbleMemento_Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleMemento_Friend.h; sourceTree = "<group>"; };
@@ -171,8 +181,6 @@
 				0E3218741CEEB56D00F9FB10 /* SaveScribbleCommand.m */,
 				0E3218751CEEB56D00F9FB10 /* DeleteScribbleCommand.h */,
 				0E3218761CEEB56D00F9FB10 /* DeleteScribbleCommand.m */,
-				0E3218771CEEB56D00F9FB10 /* OpenScribbleCommand.h */,
-				0E3218781CEEB56D00F9FB10 /* OpenScribbleCommand.m */,
 				0EBFE7351CF3DA9400EB9694 /* ScribbleMemento.h */,
 				0EBFE7361CF3DA9400EB9694 /* ScribbleMemento.m */,
 				0EBFE7381CF46BC400EB9694 /* ScribbleMemento_Friend.h */,
@@ -350,6 +358,42 @@
 			path = PaintUITests;
 			sourceTree = "<group>";
 		};
+		0E85712E1CFD42C400116679 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E8571321CFD45AF00116679 /* ThumbnailViewController.h */,
+				0E8571331CFD45AF00116679 /* ThumbnailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0E8571351CFD74BB00116679 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0E8571361CFD751200116679 /* ThumbnailViewCell.h */,
+				0E8571371CFD751200116679 /* ThumbnailViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		0E8571391CFD772300116679 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E85713A1CFD773E00116679 /* ThumbnailModel.h */,
+				0E85713B1CFD773E00116679 /* ThumbnailModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0E85713E1CFD823F00116679 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				0E3218771CEEB56D00F9FB10 /* OpenScribbleCommand.h */,
+				0E3218781CEEB56D00F9FB10 /* OpenScribbleCommand.m */,
+			);
+			name = Command;
+			sourceTree = "<group>";
+		};
 		0ED69AAF1CE9B5B6008AE0D8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +419,10 @@
 		0ED69AB11CE9B7C9008AE0D8 /* Thumbnail */ = {
 			isa = PBXGroup;
 			children = (
+				0E85713E1CFD823F00116679 /* Command */,
+				0E8571391CFD772300116679 /* Model */,
+				0E8571351CFD74BB00116679 /* Cell */,
+				0E85712E1CFD42C400116679 /* Controller */,
 			);
 			name = Thumbnail;
 			sourceTree = "<group>";
@@ -466,6 +514,7 @@
 				TargetAttributes = {
 					0E4F39F21CE5BF7700393C10 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 9R74JVS7P9;
 					};
 					0E4F3A0B1CE5BF7700393C10 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -577,12 +626,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E85713C1CFD773E00116679 /* ThumbnailModel.m in Sources */,
 				0ED69AB51CE9B9C8008AE0D8 /* CanvasViewController.m in Sources */,
 				0E32187E1CEEB56D00F9FB10 /* DeleteScribbleCommand.m in Sources */,
 				0E458CA91CED9BC800C6BDEE /* CanvasViewGenerator.m in Sources */,
+				0E8571341CFD45AF00116679 /* ThumbnailViewController.m in Sources */,
 				0E4F39FE1CE5BF7700393C10 /* CoordinatingController.m in Sources */,
 				0E3218811CEEB56D00F9FB10 /* SetStrokeColorCommand.m in Sources */,
 				0E458C9B1CED539A00C6BDEE /* Vertex.m in Sources */,
+				0E8571381CFD751200116679 /* ThumbnailViewCell.m in Sources */,
 				0E32187D1CEEB56D00F9FB10 /* SaveScribbleCommand.m in Sources */,
 				0E3218721CEEB4D500F9FB10 /* Command.m in Sources */,
 				0EC6CBB61CFC20B400A87400 /* MarkEnumerator.m in Sources */,
@@ -614,6 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4F3A111CE5BF7700393C10 /* PaintTests.m in Sources */,
+				0E85713D1CFD77EE00116679 /* ScribbleManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,10 +800,13 @@
 			baseConfigurationReference = 0AAB65F64F215D93510425E7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Paint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhongwu.Paint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -759,10 +815,13 @@
 			baseConfigurationReference = 57BDE0CF2713B96B8E35B106 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Paint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhongwu.Paint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
