@@ -28,6 +28,9 @@
     [self.window setRootViewController:navigationController];
     [self.window makeKeyWindow];
     
+    //修复controller push到navigation时右上角出现黑块
+    self.window.backgroundColor = [UIColor whiteColor];
+    
     return YES;
 }
 

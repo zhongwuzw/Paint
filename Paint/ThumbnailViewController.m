@@ -10,7 +10,6 @@
 #import "ScribbleManager.h"
 #import "ThumbnailViewCell.h"
 #import "ThumbnailModel.h"
-#import "UIImageView+WebCache.h"
 #import "OpenScribbleCommand.h"
 
 static NSString *cellIdentifier = @"Cell";

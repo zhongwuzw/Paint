@@ -13,6 +13,4 @@
 
 @property (nonatomic, strong) Command *command;
 
-- (instancetype)initWithCommand:(Command *)command;
-
 @end

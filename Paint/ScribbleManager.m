@@ -29,8 +29,6 @@
                              stringByAppendingPathComponent:scribbleDataName];
     [mementoData writeToFile:mementoPath atomically:YES];
     
-    // save the thumbnail directly in
-    // the file system
     NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(image)];
     NSString *imagePath = [[self scribbleThumbnailPath]
                            stringByAppendingPathComponent:scribbleThumbnailName];
@@ -45,7 +43,6 @@
 
 - (NSString *) scribbleThumbnailPath
 {
-    // lazy create the scribble thumbnail directory
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if (![fileManager fileExistsAtPath:kScribbleThumbnailPath])
     {
@@ -105,7 +102,6 @@
 
 - (NSString *) scribbleDataPath
 {
-    // lazy create the scribble data directory
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if (![fileManager fileExistsAtPath:kScribbleDataPath])
     {

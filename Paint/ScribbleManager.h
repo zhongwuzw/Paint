@@ -15,7 +15,6 @@
 
 - (void) saveScribble:(Scribble *)scribble thumbnail:(UIImage *)image;
 - (NSInteger) numberOfScribbles;
-- (Scribble *) scribbleAtIndex:(NSInteger)index;
 - (ThumbnailModel *) scribbleThumbnailViewAtIndex:(NSInteger)index;
 
 

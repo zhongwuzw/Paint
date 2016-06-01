@@ -24,7 +24,6 @@
 	IBOutlet UIView *paletteView_;
 }
 
-// slider event handler
 - (IBAction) onCommandSliderValueChanged:(CommandSlider *)slider;
 
 @end
