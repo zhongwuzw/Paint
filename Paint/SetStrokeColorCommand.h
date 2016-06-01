@@ -18,12 +18,12 @@ typedef void (^PostColorUpdateProvider)(UIColor *color);
 @protocol SetStrokeColorCommandDelegate
 
 - (void) command:(SetStrokeColorCommand *) command 
-                didRequestColorComponentsForRed:(NSNumber *) red
-                                          green:(NSNumber *) green
-                                           blue:(NSNumber *) blue;
+                didRequestColorComponentsForRed:(NSNumber **) red
+                                          green:(NSNumber **) green
+                                           blue:(NSNumber **) blue;
 
 - (void) command:(SetStrokeColorCommand *) command
-                didFinishColorUpdateWithColor:(UIColor *) color;
+                didFinishColorUpdateWithColor:(UIColor **) color;
 
 @end
 

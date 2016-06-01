@@ -14,7 +14,7 @@
 @protocol SetStrokeSizeCommandDelegate
 
 - (void) command:(SetStrokeSizeCommand *)command 
-                didRequestForStrokeSize:(NSNumber *)size;
+                didRequestForStrokeSize:(NSNumber **)size;
 
 @end
 

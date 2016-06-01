@@ -16,7 +16,6 @@
 		0E3218801CEEB56D00F9FB10 /* SetStrokeSizeCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E32187A1CEEB56D00F9FB10 /* SetStrokeSizeCommand.m */; };
 		0E3218811CEEB56D00F9FB10 /* SetStrokeColorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E32187C1CEEB56D00F9FB10 /* SetStrokeColorCommand.m */; };
 		0E3218851CEEC3D000F9FB10 /* CommandSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3218841CEEC3D000F9FB10 /* CommandSlider.m */; };
-		0E3218891CEEEA2500F9FB10 /* PaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3218881CEEEA2500F9FB10 /* PaletteViewController.m */; };
 		0E32188C1CEF178100F9FB10 /* ScribbleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E32188B1CEF178100F9FB10 /* ScribbleManager.m */; };
 		0E458C9B1CED539A00C6BDEE /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E458C9A1CED539A00C6BDEE /* Vertex.m */; };
 		0E458C9E1CED719700C6BDEE /* Dot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E458C9D1CED719700C6BDEE /* Dot.m */; };
@@ -36,6 +35,8 @@
 		0E4F3A061CE5BF7700393C10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4F3A041CE5BF7700393C10 /* LaunchScreen.storyboard */; };
 		0E4F3A111CE5BF7700393C10 /* PaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F3A101CE5BF7700393C10 /* PaintTests.m */; };
 		0E4F3A1C1CE5BF7700393C10 /* PaintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F3A1B1CE5BF7700393C10 /* PaintUITests.m */; };
+		0E56BA381CFE7D6A0069788F /* PaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E56BA361CFE7D6A0069788F /* PaletteViewController.m */; };
+		0E56BA391CFE7D6A0069788F /* PaletteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E56BA371CFE7D6A0069788F /* PaletteViewController.xib */; };
 		0E8571341CFD45AF00116679 /* ThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8571331CFD45AF00116679 /* ThumbnailViewController.m */; };
 		0E8571381CFD751200116679 /* ThumbnailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8571371CFD751200116679 /* ThumbnailViewCell.m */; };
 		0E85713C1CFD773E00116679 /* ThumbnailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E85713B1CFD773E00116679 /* ThumbnailModel.m */; };
@@ -85,8 +86,6 @@
 		0E32187C1CEEB56D00F9FB10 /* SetStrokeColorCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetStrokeColorCommand.m; sourceTree = "<group>"; };
 		0E3218831CEEC3D000F9FB10 /* CommandSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandSlider.h; sourceTree = "<group>"; };
 		0E3218841CEEC3D000F9FB10 /* CommandSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandSlider.m; sourceTree = "<group>"; };
-		0E3218871CEEEA2500F9FB10 /* PaletteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteViewController.h; sourceTree = "<group>"; };
-		0E3218881CEEEA2500F9FB10 /* PaletteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteViewController.m; sourceTree = "<group>"; };
 		0E32188A1CEF178100F9FB10 /* ScribbleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleManager.h; sourceTree = "<group>"; };
 		0E32188B1CEF178100F9FB10 /* ScribbleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleManager.m; sourceTree = "<group>"; };
 		0E458C981CED51E800C6BDEE /* Mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mark.h; sourceTree = "<group>"; };
@@ -126,6 +125,9 @@
 		0E4F3A171CE5BF7700393C10 /* PaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4F3A1B1CE5BF7700393C10 /* PaintUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintUITests.m; sourceTree = "<group>"; };
 		0E4F3A1D1CE5BF7700393C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E56BA351CFE7D6A0069788F /* PaletteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteViewController.h; sourceTree = "<group>"; };
+		0E56BA361CFE7D6A0069788F /* PaletteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteViewController.m; sourceTree = "<group>"; };
+		0E56BA371CFE7D6A0069788F /* PaletteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaletteViewController.xib; sourceTree = "<group>"; };
 		0E8571321CFD45AF00116679 /* ThumbnailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailViewController.h; sourceTree = "<group>"; };
 		0E8571331CFD45AF00116679 /* ThumbnailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailViewController.m; sourceTree = "<group>"; };
 		0E8571361CFD751200116679 /* ThumbnailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailViewCell.h; sourceTree = "<group>"; };
@@ -226,8 +228,9 @@
 		0E3218861CEEEA1400F9FB10 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0E3218871CEEEA2500F9FB10 /* PaletteViewController.h */,
-				0E3218881CEEEA2500F9FB10 /* PaletteViewController.m */,
+				0E56BA351CFE7D6A0069788F /* PaletteViewController.h */,
+				0E56BA361CFE7D6A0069788F /* PaletteViewController.m */,
+				0E56BA371CFE7D6A0069788F /* PaletteViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E56BA391CFE7D6A0069788F /* PaletteViewController.xib in Resources */,
 				0E4F3A061CE5BF7700393C10 /* LaunchScreen.storyboard in Resources */,
 				0E4F3A031CE5BF7700393C10 /* Assets.xcassets in Resources */,
 				0E4F3A011CE5BF7700393C10 /* Main.storyboard in Resources */,
@@ -626,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E56BA381CFE7D6A0069788F /* PaletteViewController.m in Sources */,
 				0E85713C1CFD773E00116679 /* ThumbnailModel.m in Sources */,
 				0ED69AB51CE9B9C8008AE0D8 /* CanvasViewController.m in Sources */,
 				0E32187E1CEEB56D00F9FB10 /* DeleteScribbleCommand.m in Sources */,
@@ -648,7 +653,6 @@
 				0E458CB91CED9EFB00C6BDEE /* Scribble.m in Sources */,
 				0E458CA11CED732300C6BDEE /* Stroke.m in Sources */,
 				0E458CA61CED9A3B00C6BDEE /* CanvasView.m in Sources */,
-				0E3218891CEEEA2500F9FB10 /* PaletteViewController.m in Sources */,
 				0EC6CBB31CFC1F6400A87400 /* NSMutableArray+Stack.m in Sources */,
 				0E32187F1CEEB56D00F9FB10 /* OpenScribbleCommand.m in Sources */,
 				0EBFE7371CF3DA9400EB9694 /* ScribbleMemento.m in Sources */,
