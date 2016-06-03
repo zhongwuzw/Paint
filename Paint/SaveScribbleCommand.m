@@ -10,6 +10,7 @@
 #import "ScribbleManager.h"
 #import "CoordinatingController.h"
 #import "UIView+UIImage.h"
+#import "MBProgressHUD.h"
 
 @implementation SaveScribbleCommand
 
@@ -25,12 +26,17 @@
     ScribbleManager *scribbleManager = [ScribbleManager new];
     [scribbleManager saveScribble:scribble thumbnail:canvasViewImage];
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"绘图保存成功"
-                                                        message:nil
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-    [alertView show];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:canvasViewController.navigationController.view animated:YES];
+    
+    hud.mode = MBProgressHUDModeCustomView;
+    UIImage *image = [[UIImage imageNamed:@"Checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    hud.customView = [[UIImageView alloc] initWithImage:image];
+    hud.customView.tintColor = [UIColor whiteColor];
+    hud.square = YES;
+    hud.labelText = NSLocalizedString(@"Done", @"HUD done title");
+    
+    [hud hide:YES afterDelay:3.f];
+
 }
 
 @end
